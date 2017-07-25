@@ -16,8 +16,8 @@ m = Matrix(symbols('x1 x2'))
 
 
 def dfdx(x, g):
-    return [float(g[i].subs(m[0], x[0]).subs(m[1], x[1])) for i in range(len(g))]
-
+    return [float(g[i].subs(m[0], x[0]).subs(m[1], x[1]))
+            for i in range(len(g))]
 
 def sd(alpha=0.0002):
     """
